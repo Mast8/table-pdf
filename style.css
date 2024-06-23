@@ -1,13 +1,4 @@
-/*
-Responsive HTML Table With Pure CSS - Web Design/UI Design
 
-Code written by:
-👨🏻‍⚕️ Coding Design (Jeet Saru)
-
-> You can do whatever you want with the code. However if you love my content, you can **SUBSCRIBED** my YouTube Channel.
-
-🌎link: www.youtube.com/codingdesign 
-*/
 
 * {
     margin: 0;
@@ -61,7 +52,6 @@ main.table {
 }
 
 .table__header .input-group {
-    width: 35%;
     height: 100%;
     background-color: #fff5;
     padding: 0 .8rem;
@@ -212,11 +202,7 @@ tbody tr.hide td img {
 }
 
 
-@media (max-width: 1000px) {
-    td:not(:first-of-type) {
-        min-width: 12.1rem;
-    }
-}
+
 
 thead th span.icon-arrow {
     display: inline-block;
@@ -241,6 +227,7 @@ thead th:hover {
 }
 
 thead th.active span.icon-arrow{
+   
     background-color: #6c00bd;
     color: #fff;
 }
@@ -250,6 +237,7 @@ thead th.asc span.icon-arrow{
 }
 
 thead th.active,tbody td.active {
+    font-weight: bold;
     color: #6c00bd;
 }
 
