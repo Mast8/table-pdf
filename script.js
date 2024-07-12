@@ -53,6 +53,9 @@ function sortTable(column, sort_asc) {
         let first_row = a.querySelectorAll('td')[column].textContent.toLowerCase(),
             second_row = b.querySelectorAll('td')[column].textContent.toLowerCase();
 
+        //return compareValues(first_row,t2.second_row)
+        //return (a<b) ? -1 : (a>b) ? 1 : 0;
+        
         return sort_asc ? (first_row < second_row ? 1 : -1) : (first_row < second_row ? -1 : 1);
     })
         .map(sorted_row => document.querySelector('tbody').appendChild(sorted_row));
@@ -128,12 +131,7 @@ json_btn.onclick = () => {
 const csv_btn = document.querySelector('#toCSV');
 
 const toCSV = function (table) {
-    // Code For SIMPLE TABLE
-    // const t_rows = table.querySelectorAll('tr');
-    // return [...t_rows].map(row => {
-    //     const cells = row.querySelectorAll('th, td');
-    //     return [...cells].map(cell => cell.textContent.trim()).join(',');
-    // }).join('\n');
+    
 
     const t_heads = table.querySelectorAll('th'),
         tbody_rows = table.querySelectorAll('tbody tr');
