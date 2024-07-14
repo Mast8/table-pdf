@@ -13,12 +13,14 @@ function searchTable() {
     table_rows.forEach((row, i) => {
         let table_data = row.textContent.toLowerCase(),
             search_data = search.value.toLowerCase(),
-            finds = table_data.indexOf(search_data);
-        console.log(finds);
+            finds = table_data.indexOf(search_data),
+            count =  +finds; 
+        console.log("cou" + count);
         row.classList.toggle('hide', table_data.indexOf(search_data) < 0);
         row.style.setProperty('--delay', i / 25 + 's');
-        if(finds <=0 ){
-            found.textContent = "no results found";
+        
+        if(count < 0 ){
+            found.textContent = "No results found";
         }
     })
     

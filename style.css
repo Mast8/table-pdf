@@ -241,6 +241,12 @@ thead th.active,tbody td.active {
     color: #6c00bd;
 }
 
+.found {
+    text-align: center;
+    padding: 10px;
+    color: red;
+}
+
 .export__file {
     position: relative;
 }
