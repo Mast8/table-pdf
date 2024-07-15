@@ -13,23 +13,30 @@ function searchTable() {
     table_rows.forEach((row, i) => {
         let table_data = row.textContent.toLowerCase(),
             search_data = search.value.toLowerCase(),
-            finds = table_data.indexOf(search_data),
-            count =  +finds; 
-        console.log("cou" + count);
+            finds = table_data.indexOf(search_data);
+            
+        console.log(" find " + finds) ;
         row.classList.toggle('hide', table_data.indexOf(search_data) < 0);
         row.style.setProperty('--delay', i / 25 + 's');
+        var count = 0;
+        if(finds > 0 ){
+           count = count +1;
+           
+        }else count = count -1;
+        console.log(" count  " + count) ;
+        if (count < 1 ) found.textContent = "No results found";
         
-        if(count < 0 ){
-            found.textContent = "No results found";
-        }
+        
     })
-    
+ 
     
 
     document.querySelectorAll('tbody tr:not(.hide)').forEach((visible_row, i) => {
         visible_row.style.backgroundColor = (i % 2 == 0) ? 'transparent' : '#0000000b';
     });
 }
+
+
 
 // 2. Sorting | Ordering data of HTML table
 
